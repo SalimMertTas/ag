@@ -1,0 +1,19 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    background-image: url("//images03.nicepage.com/05136ab1d24c39d6df2c5e00/f015a76c69245d0b99b5695b/bg2.jpg");
+    background-size: 100%;
+    object-fit: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    .text{
+        h1{
+          margin: 0px;
+          padding: 0px;  
+        }
+    }
+}
+

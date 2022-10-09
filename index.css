@@ -1,7 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+::-moz-placeholder {
+  color: black;
+  padding: 10px;
+  font-size: 17px;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  color: black;
+  padding: 10px;
+  font-size: 17px;
+  opacity: 0.5;
+}
+
+::placeholder {
+  color: black;
+  padding: 10px;
+  font-size: 17px;
+  opacity: 0.5;
+}
+
 body {
   padding: 0px;
   margin: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .container {
@@ -134,29 +160,22 @@ body {
 
 .number {
   width: 100%;
-  height: 750px;
   display: flex;
   background-color: black;
+  padding: 120px 50px;
 }
 .number .contain {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   color: white;
   align-items: center;
   text-align: start;
-  margin-left: 50px;
-  margin-right: 50px;
+  width: 70%;
+  margin: 0 auto;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .number .contain .left {
-  width: 50%;
-  height: 100%;
-}
-.number .contain .left .article {
-  margin-top: 13%;
-  margin-right: 20%;
-  margin-left: 20%;
-  margin-bottom: 30%;
+  margin-right: 90px;
 }
 .number .contain .left .article h1 {
   font-size: 9rem;
@@ -172,16 +191,6 @@ body {
 .number .contain .left .article p {
   font-size: 1.05rem;
   line-height: 1.6;
-}
-.number .contain .right {
-  width: 50%;
-  height: 100%;
-}
-.number .contain .right .article {
-  margin-top: 13%;
-  margin-bottom: 30%;
-  margin-left: 20%;
-  margin-right: 20%;
 }
 .number .contain .right .article h1 {
   font-size: 9rem;
@@ -266,35 +275,60 @@ body {
 
 .sale {
   width: 100%;
-  height: 750px;
   background-position: 50% 100%;
   background-image: url("//images03.nicepage.com/c461c07a441a5d220e8feb1a/ed5530a7ad325fa393d73e4c/xdz.jpg");
+  z-index: 10;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .sale .sale-container {
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0px;
+  margin: 0 auto;
 }
 .sale .sale-container .left-sale {
-  width: 50%;
-  margin: 60px 20px 350px 350px;
   color: white;
   text-align: center;
+  margin-right: 80px;
 }
-.sale .sale-container .left-sale .sale-text {
-  border: 10px;
-  border-color: white;
-  border-style: solid;
+.sale .sale-container .left-sale .left-sale-wrapper {
+  border: 10px solid white;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  min-height: 620px;
+  align-items: center;
 }
-.sale .sale-container .left-sale .sale-text h1 {
-  height: 400px;
+.sale .sale-container .left-sale .left-sale-wrapper .sale-text {
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+}
+.sale .sale-container .left-sale .left-sale-wrapper .sale-text p {
   font-size: 9rem;
-  background-image: url(dcef.png);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+.sale .sale-container .left-sale .left-sale-wrapper .sale-images {
+  position: absolute;
+  display: flex;
+  width: 540px;
+  height: 330px;
+  z-index: -1;
+  top: 100px;
+  left: -100px;
+}
+.sale .sale-container .left-sale .left-sale-wrapper .sale-images img {
+  width: 100%;
+  height: 100%;
 }
 .sale .sale-container .right-sale {
-  width: 50%;
-  margin: 215px 320px 350px 50px;
   color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .sale .sale-container .right-sale h1 {
   color: #e72e36;
@@ -311,4 +345,112 @@ body {
   letter-spacing: 4px;
   line-height: 1.5;
   font-weight: 600;
+}
+
+.form .form-container {
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #E72E36;
+  color: white;
+}
+.form .form-container .form-text {
+  min-height: 510px;
+  margin-right: 60px;
+}
+.form .form-container .form-text .form-box {
+  align-items: center;
+  margin: 50px 0;
+  max-width: 600px;
+}
+.form .form-container .form-text .form-box .form-title h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  letter-spacing: -1;
+  font-weight: 300;
+  margin-right: 50px;
+  line-height: 1;
+}
+.form .form-container .form-text .form-box .form-input .row {
+  width: 100%;
+  margin: 0;
+  margin-top: 30px;
+}
+.form .form-container .form-text .form-box .form-input .row label {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.form .form-container .form-text .form-box .form-input .row input {
+  width: 100%;
+  height: 45px;
+  margin-top: 5px;
+}
+.form .form-container .form-text .form-box .form-input .row textarea {
+  width: 100%;
+  height: 120px;
+  margin-top: 5px;
+  max-width: 100%;
+  max-height: 200px;
+}
+.form .form-container .form-text .form-box .form-input .submit button {
+  width: 110px;
+  height: 50px;
+  color: azure;
+  background-color: transparent;
+  border: 2px solid white;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.form .form-container .social-media {
+  margin-right: 100px;
+  display: flex;
+}
+.form .form-container .social-media .social-box {
+  align-items: center;
+  margin: 26px 15px 0;
+  padding-right: 115px;
+}
+.form .form-container .social-media .social-box .social-title h3 {
+  font-size: 30px;
+}
+.form .form-container .social-media .social-box .social-image .row {
+  font-size: 17px;
+}
+.form .form-container .social-media .social-box .social-image .row img {
+  width: 70px;
+  background-color: white;
+  border-radius: 20px;
+}
+.footer {
+  background-color: #333333;
+  color: white;
+  min-height: 200px;
+}
+.footer .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px 0;
+}
+.footer .footer-container p {
+  margin: 0;
+  word-wrap: break-word;
+}
+.footer .footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px 0;
+}
+.footer .footer-link p a {
+  padding: 10px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
 }/*# sourceMappingURL=index.css.map */
